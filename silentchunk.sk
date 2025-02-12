@@ -1,0 +1,18 @@
+# Silent Chunk
+# Automatically pauses Chunky generation when the first player joins,
+# and resumes it when no players remain.
+
+on join:
+    if size of all players is 1:
+        broadcast "Pausing Chunky generation will occur in 20 seconds."
+        wait 5 seconds
+        broadcast "Pausing Chunky generation due to player join."
+        execute console command "/chunky pause"
+        broadcast "Chunky generation paused."
+
+on quit:
+    wait 10 seconds
+    if size of all players is 0:
+        broadcast "Resuming Chunky generation due to no players online."
+        execute console command "/chunky continue"
+        broadcast "Chunky generation resumed."
