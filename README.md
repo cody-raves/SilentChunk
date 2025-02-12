@@ -43,4 +43,4 @@ SilentChunk listens for player join and quit events:
 
 1. Download the SilentChunk Skript file.
 2. Place the file into your server's `plugins/Skript/scripts/` folder.
-3. Reload Skript using the command:
+3. Reload Skript using the command: /sk reload all
